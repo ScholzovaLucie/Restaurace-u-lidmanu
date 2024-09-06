@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="cz" class="kontakt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurace u Lidmanů</title>
+    <link id="styly" rel="stylesheet" href="css/style.css">
+    <link id="styly" rel="stylesheet" href="css/styly_mobil.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="../favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../favicomatic/favicon-16x16.png" sizes="16x16" />
+
+</head>
+
+<body>
+
+    <div class="obrazky" id="obrazky">
+
+        <div id="pozadi" class="pozadi pozmobil">
+            <input id="menu" onclick="menoShow()" class="menu" type="image" src="galerie/menu.webp" />
+
+            <img id="uvodlogo" class="uvodlogo" src="galerie/logolidman.webp" alt="Logo">
+        </div>
+    </div>
+
+    <div id="topnav" class="topnav">
+        <div class="nav-links">
+            <a id="onas" href='index.html'>O nás</a>
+            <a id="kontakt" href="kontakt.php">Kontakt</a>
+            <a id="restaurace" class="active" href='restaurace.html'>Restaurace</a>
+            <a id="ubytovani" href='ubytovani.html'>Ubytování</a>
+            <a id="svatby" href='svatby.html'>Svatby</a>
+            <a id="balicky"  href='pobytoveBalicka.html'>Pobytové balíčky</a>
+            <a id="cenik" href='cenik.html'>Ceník</a>
+            <a id="galerie" href='galerie.html'>Galerie</a>
+            <a id="rezervace" href='rezervace.php'>Rezervace</a> 
+        </div>
+        <div class="jazyky">
+            <btn onclick="changeLanguage('cz'); changeLanguageMenu('cz');" id="cz" class="jazyk aktivni">CZ</btn>
+            <btn onclick="changeLanguage('en'); changeLanguageMenu('en');" id="en" class="jazyk">EN</btn>
+            <btn onclick="changeLanguage('pl'); changeLanguageMenu('pl');" id="pl" class="jazyk">PL</btn>
+            <btn onclick="changeLanguage('de'); changeLanguageMenu('de');" id="de" class="jazyk">DE</btn>
+        </div>
+        <div class="canceltopnav" onclick="menoClose()">
+            <img id="canceltopnav" class="canceltopnav" src="galerie/cancel.webp" alt="cancel">
+        </div>
+    </div>
+
+    <div id="main" class="main">
+        <div class="obrazky_uvod">
+            <img class="obrazky_uvod" id="obrazky_uvod" src="" alt="Uvod">
+        </div>
+        <div class="scroll">
+            <a id="up" onclick="topFunction()" title="Go to top">
+                <img id="up_img" src="galerie/down.webp">
+            </a>
+            <a id="down" onclick="down()" title="Go down">
+                <img id="down_img" src="galerie/down.webp">
+            </a>
+        </div>
+        <div id="restaurace" class="restaurace">
+
+            <div class="oteviraciDoba" id="oteviraciDoba">
+                <p id="oteviraci_doba_nadpis">Otevírací doba restaurace pro veřejnost:</p>
+                <div class="tableoteviraciDoba">
+                    <div>
+                        <div id="casy1">
+                            Pátek: 14.00 – 21.00 (vaříme do 19.00)<br>
+                            Sobota: 11.30 – 20.00 (vaříme do 19.00)<br>
+                            Neděle: 11.30 – 20.00 (vaříme do 19.00) 
+                        </div>
+                    </div>
+                </div>
+
+                <p id="nabidka"class="nabidka">Rádi pro Vás připravíme různé větší společenské akce (svatby, rodinné oslavy,
+                    pohřební hostiny, rauty, schůze, školení apod. ). OTEVÍRACÍ DOBA dle dohody.</p>
+            </div>
+
+            <div class="infoBlock">
+                <div class="obrazek">
+                    <img id="obrazek" src="galerie/galerie/interier/100_HZ6_3979_Penzion_U_Lidmanu.webp" alt="Lokal">
+                </div>
+                <div class="text" id="lokal">
+                    V lokálu s krbem a kapacitou 40 osob podáváme formou DENNÍ NABÍDKY klasická jídla české kuchyně
+                    a domácí moučníky. Na našem baru najdete moravská vína, regionální pivo, nealkoholické,
+                    alkoholické a teplé nápoje.
+                </div>
+            </div>
+
+            <div class="infoBlock">
+                <div class="obrazek">
+                    <img src="galerie/galerie/exterier/012_HZ6_3793_Penzion_U_Lidmanu.webp" alt="Zahradka">
+                </div>
+                <div class="text"id="zahradka">
+                    Při pěkném počasí můžete posedět na naší letní zahrádce s vítěznou jabloní– stromem roku ČR v roce
+                    2020. Zde si můžete vychutnat klid venkova a krásné výhledy na okolní kopce. Děti si mohou pohrát
+                    na pískovišti nebo se zhoupnout na houpačce.
+                </div>
+            </div>
+
+            <div class="infoBlock">
+                <div class="obrazek">
+                    <img src="galerie/galerie/interier/088_HZ6_3958_Penzion_U_Lidmanu.webp" alt="Salonek">
+                </div>
+                <div class="text" id="salonek">
+                    Salónek restaurace s kapacitou 20 osob slouží k pořádání menších oslav, jako školící místnost,
+                    společenská místnost pro ubytované hosty nebo v případě většího množství hostů k rozšíření služeb
+                    lokálu.
+                </div>
+            </div>
+
+            <div class="infoBlock">
+                <div class="obrazek">
+                    <img src="galerie/galerie/sal/110_HZ6_3997_Penzion_U_Lidmanu.webp" alt="Sal">
+                </div>
+                <div class="text" id="sal">
+                    Velký společenský sál s kapacitou 70 osob je určen k pořádání větších společenských akcí - svatby,
+                    oslavy, školení, přednášky, výstavy apod.
+                </div>
+            </div>
+        </div>
+
+        <script src='js/welcome/welcome_img_restaurace.js'></script>
+        <script src='js/aktivity.js'></script>
+        <script src='js/translations/translations_restaurace.js'></script>
+        <script src='js/translations/translations_global.js'></script>
+</body>
+
+</html>

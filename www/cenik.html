@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurace u Lidmanů</title>
+    <link id="styly" rel="stylesheet" href="css/style.css">
+    <link id="styly" rel="stylesheet" href="css/styly_mobil.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="../favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../favicomatic/favicon-16x16.png" sizes="16x16" />
+</head>
+
+<body>
+
+    <div class="obrazky" id="obrazky">
+
+        <div id="pozadi" class="pozadi pozmobil">
+            <input id="menu" onclick="menoShow()" class="menu" type="image" src="galerie/menu.webp" />
+
+            <img id="uvodlogo" class="uvodlogo" src="galerie/logolidman.webp" alt="Logo">
+        </div>
+    </div>
+
+    <div id="topnav" class="topnav">
+        <div class="nav-links">
+            <a id="onas" href='index.html'>O nás</a>
+            <a id="kontakt" href="kontakt.php">Kontakt</a>
+            <a id="restaurace" href='restaurace.html'>Restaurace</a>
+            <a id="ubytovani" href='ubytovani.html'>Ubytování</a>
+            <a id="svatby" href='svatby.html'>Svatby</a>
+            <a id="balicky" href='pobytoveBalicka.html'>Pobytové balíčky</a>
+            <a id="cenik" class="active" href='cenik.html'>Ceník</a>
+            <a id="galerie" href='galerie.html'>Galerie</a>
+            <a id="rezervace" href='rezervace.php'>Rezervace</a> 
+        </div>
+        <div class="jazyky">
+            <btn onclick="changeLanguage('cz'); changeLanguageMenu('cz');" id="cz" class="jazyk aktivni">CZ</btn>
+            <btn onclick="changeLanguage('en'); changeLanguageMenu('en');" id="en" class="jazyk">EN</btn>
+            <btn onclick="changeLanguage('pl'); changeLanguageMenu('pl');" id="pl" class="jazyk">PL</btn>
+            <btn onclick="changeLanguage('de'); changeLanguageMenu('de');" id="de" class="jazyk">DE</btn>
+        </div>
+        <div class="canceltopnav" onclick="menoClose()">
+            <img id="canceltopnav" class="canceltopnav" src="galerie/cancel.webp" alt="cancel">
+        </div>
+    </div>
+
+    <div id="main" class="main">
+        <div class="scroll">
+            <a id="up" onclick="topFunction()" title="Go to top">
+                <img id="up_img" src="galerie/down.webp">
+            </a>
+            <a id="down" onclick="down()" title="Go down">
+                <img id="down_img" src="galerie/down.webp">
+            </a>
+        </div>
+
+        <div class="cenik">
+            <div class="text">
+                <p id="ceny_nadpis">Uvedené ceny jsou za osobu a noc na pokojích včetně bufetové snídaně.</p>
+                <div class="ceny_pokoju">
+                    <div id="ceny_pokoju1">
+                        <b>Dvoulůžkový pokoj</b>
+                        <p>550-750 Kč za osobu a noc*</p>
+                    </div>
+                    <div id="ceny_pokoju2">
+                        <b>Třílůžkový pokoj</b>
+                        <p>520-680 Kč za osobu a noc*</p>
+                    </div>
+                    <div id="ceny_pokoju3">
+                        <b>Čtyřlůžkový pokoj</b>
+                        <p>490-590 Kč za osobu a noc*</p>
+                    </div>
+                </div>
+            </div>
+            <div class="obrazek">
+                <img src="galerie/galerie/pokoje/039_HZ6_3852_Penzion_U_Lidmanu.webp" alt="">
+            </div>
+            <div class="doplatky">
+                <div class="text" id="doplatky1">
+                    cena nezahrnuje rekreační a ubytovací poplatek obci
+                    20,-Kč/noc/osoba (18-70 let)
+                </div>
+                <div class="text" id="doplatky2">
+                    *cena v závislosti na délce pobytu, typu pokoje, státních
+                    svátcích/prázdninách a aktuální
+                    obsazenosti pensionu
+                </div>
+            </div>
+        </div>
+
+        <div class="cenik">
+            <div class="text">
+                <h2 id="cenik_deti_nadpis">Ubytování dětí</h2>
+                <p id="cenik_deti_text">Uvedené ceny jsou za dítě a noc na pokoji včetně snídaně v doprovodu dvou dospělých osob.
+                    Děti do 2 let mají pobyt zdarma bez nároku na služby.</p>
+
+                <b id="cenik_deti_vek">Děti  od 2 do 10let</b>
+                <p>400Kč</p>
+            </div>
+            <div class="obrazek">
+                <img src="galerie/galerie/pokoje/058_HZ6_3886_Penzion_U_Lidmanu.webp" alt="">
+            </div>
+        </div>
+
+        <div class="cenik">
+            <div class="text">
+                <h2 id="cenik_priplatky_nadpis">Příplatky</h2>
+                <table class="priplatky">
+                    <tr>
+                        <th id="priplatky1">
+                            Jednolůžkový pokoj (pouze 1 osoba na dvoulůžkovém pokoji)
+                        </th>
+                        <td>
+                            850,-Kč
+                        </td>
+                    </tr>
+                    <tr>
+                        <th id="priplatky2">
+                            Večeře (menu o 2 chodech)
+                        </th>
+                        <td>
+                            189 Kč
+                        </td>
+                    </tr>
+                    <tr>
+                        <th id="priplatky3">
+                            Večeře děti 3-10 let
+                        </th>
+                        <td>
+                            129 Kč
+                        </td>
+                    </tr>
+                    <tr>
+                        <th id="priplatky4">
+                            Pobyt psa
+                        </th>
+                        <td id="priplatky4_cena">
+                            90 Kč/noc nebo 400 Kč/pobyt
+                        </td>
+                    </tr>
+                    <tr>
+                        <th id="priplatky5">
+                            Příplatek za pobyt na jednu noc
+                        </th>
+                        <td id="priplatky5_cena">
+                            130 Kč/osoba
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="obrazek">
+                <img src="galerie/galerie/pokoje/081_HZ6_3941_Penzion_U_Lidmanu.webp" alt="">
+            </div>
+        </div>
+    
+
+    <div class="cenik">
+        <div class="text">
+            <h2 id="dalsi_nadpis">Další informace</h2>
+            <div id="dalsi_text">
+                V hlavní sezóně upřednostňujeme TÝDENNÍ POBYTY (sobota-sobota)</br>
+                Pobyt je možné objednat i BEZ SNÍDANĚ. 460 Kč- 560Kč/osoba</br>
+                Na přání Vám vytvoříme dárkový poukaz.</br>
+            </div>
+        </div>
+        <div class="obrazek">
+            <img src="galerie/galerie/interier/106_HZ6_3993_Penzion_U_Lidmanu.webp" alt="">
+        </div>
+    </div>
+    </div>
+
+    <script src='js/welcome/welcome_img_cenik.js'></script>
+    <script src='js/aktivity.js'></script>
+    <script src='js/translations/translation_cenik.js'></script>
+    <script src='js/translations/translations_global.js'></script>
+</body>
+
+</html>

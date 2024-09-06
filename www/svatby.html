@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurace u Lidmanů</title>
+    <link id="styly" rel="stylesheet" href="css/style.css">
+    <link id="styly" rel="stylesheet" href="css/styly_mobil.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="../favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../favicomatic/favicon-16x16.png" sizes="16x16" />
+</head>
+
+<body>
+
+    <div class="obrazky" id="obrazky">
+        <div id="pozadi" class="pozadi">
+            <input id="menu" onclick="menoShow()" class="menu" type="image" src="galerie/menu.webp" />
+
+            <img id="uvodlogo" class="uvodlogo" src="galerie/logolidman.webp" alt="Logo">
+        </div>
+    </div>
+
+    <div id="topnav" class="topnav">
+        <div class="nav-links">
+            <a id="onas" href='index.html'>O nás</a>
+            <a id="kontakt" href="kontakt.php">Kontakt</a>
+            <a id="restaurace" href='restaurace.html'>Restaurace</a>
+            <a id="ubytovani" href='ubytovani.html'>Ubytování</a>
+            <a id="svatby" class="active" href='svatby.html'>Svatby</a>
+            <a id="balicky"  href='pobytoveBalicka.html'>Pobytové balíčky</a>
+            <a id="cenik" href='cenik.html'>Ceník</a>
+            <a id="galerie" href='galerie.html'>Galerie</a>
+            <a id="rezervace" href='rezervace.php'>Rezervace</a> 
+        </div>
+        <div class="jazyky">
+            <btn onclick="changeLanguage('cz'); changeLanguageMenu('cz');" id="cz" class="jazyk aktivni">CZ</btn>
+            <btn onclick="changeLanguage('en'); changeLanguageMenu('en');" id="en" class="jazyk">EN</btn>
+            <btn onclick="changeLanguage('pl'); changeLanguageMenu('pl');" id="pl" class="jazyk">PL</btn>
+            <btn onclick="changeLanguage('de'); changeLanguageMenu('de');" id="de" class="jazyk">DE</btn>
+        </div>
+        <div class="canceltopnav" onclick="menoClose()">
+            <img id="canceltopnav" class="canceltopnav" src="galerie/cancel.webp" alt="cancel">
+        </div>
+    </div>
+
+    <div id="main" class="main">
+        <div class="obrazky_uvod">
+            <img class="obrazky_uvod" id="obrazky_uvod" src="" alt="Uvod">
+        </div>
+        <div class="scroll">
+            <a id="up" onclick="topFunction()" title="Go to top">
+                <img id="up_img" src="galerie/down.webp">
+            </a>
+            <a id="down" onclick="down()" title="Go down">
+                <img id="down_img" src="galerie/down.webp">
+            </a>
+        </div>
+
+        <div class="svatby">
+            <p class="psvat" id="psvat">Naše restaurace je ideální k uspořádání Vaší svatby a to nejen z důvodu romantické okolní
+                krajiny, ale i díky uspořádání našich prostor.</p>
+
+            <list class="svat">
+                <ul class="radek">
+                    <li id="radek1">Velký společenský sál – svatební tabule až pro 70 osob</li>
+                    <li id="radek2">Celková kapacita svatby až 90 osob</li>
+                    <li id="radek3">Svatební menu, raut dle Vašich představ a požadavků</li>
+                    <li id="radek4">Pro menší svatby nabízíme salónek restaurace s kapacitou 20 osob</li>
+                </ul>
+            </list>
+            <img class="srdce" src="galerie/two-hearts_roh_hnedy.webp">
+        </div>
+
+    </div>
+
+    <script src='js/aktivity.js'></script>
+    <script src='js/welcome/welcome_img_svatba.js'></script>
+    <script src='js/translations/translations_svatby.js'></script>
+    <script src='js/translations/translations_global.js'></script>
+</body>
+
+</html>

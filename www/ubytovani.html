@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="cz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurace u Lidmanů</title>
+    <link id="styly" rel="stylesheet" href="css/style.css">
+    <link id="styly" rel="stylesheet" href="css/styly_mobil.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" type="image/png" href="../favicomatic/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../favicomatic/favicon-16x16.png" sizes="16x16" />
+
+</head>
+
+<body>
+
+    <div class="obrazky" id="obrazky">
+        <div id="pozadi" class="pozadi">
+            <input id="menu" onclick="menoShow()" class="menu" type="image" src="galerie/menu.webp" />
+
+            <img id="uvodlogo" class="uvodlogo" src="galerie/logolidman.webp" alt="Logo">
+        </div>
+    </div>
+
+    <div id="topnav" class="topnav">
+        <div class="nav-links">
+            <a id="onas" href='index.html'>O nás</a>
+            <a id="kontakt" href="kontakt.php">Kontakt</a>
+            <a id="restaurace" href='restaurace.html'>Restaurace</a>
+            <a id="ubytovani" class="active" href='ubytovani.html'>Ubytování</a>
+            <a id="svatby" href='svatby.html'>Svatby</a>
+            <a id="balicky" href='pobytoveBalicka.html'>Pobytové balíčky</a>
+            <a id="cenik" href='cenik.html'>Ceník</a>
+            <a id="galerie" href='galerie.html'>Galerie</a>
+            <a id="rezervace" href='rezervace.php'>Rezervace</a>
+        </div>
+        <div class="jazyky">
+            <btn onclick="changeLanguage('cz'); changeLanguageMenu('cz');" id="cz" class="jazyk aktivni">CZ</btn>
+            <btn onclick="changeLanguage('en'); changeLanguageMenu('en');" id="en" class="jazyk">EN</btn>
+            <btn onclick="changeLanguage('pl'); changeLanguageMenu('pl');" id="pl" class="jazyk">PL</btn>
+            <btn onclick="changeLanguage('de'); changeLanguageMenu('de');" id="de" class="jazyk">DE</btn>
+        </div>
+        <div class="canceltopnav" onclick="menoClose()">
+            <img id="canceltopnav" class="canceltopnav" src="galerie/cancel.webp" alt="cancel">
+        </div>
+    </div>
+
+    <div id="main" class="main">
+        <div class="obrazky_uvod">
+            <img class="obrazky_uvod" id="obrazky_uvod" src="" alt="Uvod">
+        </div>
+        <div class="scroll">
+            <a id="up" onclick="topFunction()" title="Go to top">
+                <img id="up_img" src="galerie/down.webp">
+            </a>
+            <a id="down" onclick="down()" title="Go down">
+                <img id="down_img" src="galerie/down.webp">
+            </a>
+        </div>
+
+        <div class="ubytovani">
+
+            <div class="oteviraciDoba" id="oteviraciDoba">
+                <div id="oteviraciDoba_uvod">
+                    Otevírací doba pensionu: denně dle objednávek<br>
+                    Otevírací doba restaurace pro UBYTOVANÉ HOSTY:<br>
+                </div>
+                <div id="oteviraciDoba_casy">
+                    Po - Čt 8:00-9:30 a 18:00-20:00<br>
+                    Pá 8:00-9:30 a 11:30 - 21:00<br>
+                    So 8:00-9:30 a 11:30 - 21:00<br>
+                    Ne 8:00-9:30 a 11:30 - 20:00<br>
+                </div>
+
+                <p class="info" id="info">Mimo otevírací dobu mohou naši hosté od pondělí do čtvrtku využívat naši
+                    restauraci též
+                    jako SAMOOBSLUŽNÝ BAR - vše vysvětlíme a zaučíme na místě</p>
+            </div>
+
+            <div class="infoBlock">
+                <div class="obrazek">
+                    <img id="obrazek" src="galerie/galerie/pokoje/039_HZ6_3852_Penzion_U_Lidmanu.webp" alt="Lokal">
+                </div>
+                <div class="text" id="ubytovani_text">
+                    V našem pensionu nabízíme ubytování v pěti pokojích s vlastním sociálním zařízením s
+                    celkovou kapacitou 13 lůžek a 3 pevné přistýlky. Pokoje jsou vybaveny starožitným
+                    selským nábytkem (postele jsou však upraveny tak, aby vyhovovaly současným požadavkům
+                    na zdravý spánek), kvalitním povlečením, ručníky a bezplatným přístupem k bezdrátovému
+                    internetu. Ve společných prostorách pensionu vám také poslouží lednice, mikrovlnná trouba a
+                    rychlovarná konvice.
+                </div>
+            </div>
+
+            <div class="infoBlock">
+                <div class="obrazek">
+                    <img src="galerie/galerie/exterier/004_HZ6_3765_Penzion_U_Lidmanu.webp" alt="Zahradka">
+                </div>
+
+                <div class="text" id="odpocinek">
+                    K odpočinku můžete využít společenskou místnost s televizí, stolními hrami, knihovnou a
+                    dětským koutkem. Ve společenském sále si můžete zahrát stolní tenis. Letní večery si
+                    můžete zpříjemnit posezením na naší restaurační zahrádce.
+                </div>
+            </div>
+
+            <div class="infoBlock">
+                <div class="obrazek">
+                    <img src="galerie/galerie/interier/088_HZ6_3958_Penzion_U_Lidmanu.webp" alt="Salonek">
+                </div>
+
+
+                <div class="text">
+                    <h2 id="info_nadpis">Další informace k pobytu</h2>
+                    <p id="info_blok">
+                        Celý pension je nekuřácký.<br>
+                        Parkování je bezplatné u pensionu.<br>
+                        Na procházky krajinou si k nám můžete PO PŘEDCHOZÍ DOHODĚ přivézt i Vašeho psího mazlíčka.<br>
+                        Vaše kola, lyže nebo kočárek Vám uschováme v prostorách pensionu.<br>
+                        Pokoje v průběhu vašeho pobytu vám rádi uklidíme na vyžádání.<br>
+                        </ul>
+                </div>
+            </div>
+
+            <div class="infoBlock">
+                <div class="obrazek">
+                    <img src="galerie/galerie/interier/099_HZ6_3978_Penzion_U_Lidmanu.webp" alt="Sal">
+                </div>
+
+
+                <div class="text">
+                    <h2 id="stravovani_nadpis">Stravování</h2>
+                    <p id="stravovani">
+                        V ceně ubytování je bufetová SNÍDANĚ, kterou podáváme každý den od 8.00 do 9.00.
+                        Ke svému pobytu si můžete přiobjednat VEČEŘE, které podáváme od pondělí do čtvrtku
+                        formou dvouchodového menu. Od pátku do neděle si můžete vybrat podle jídelního lístku.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src='js/aktivity.js'></script>
+    <script src='js/welcome/welcome_img_ubytovani.js'></script>
+    <script src='js/translations/translations_ubytovani.js'></script>
+    <script src='js/translations/translations_global.js'></script>
+
+</body>
+
+</html>
